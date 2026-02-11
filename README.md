@@ -48,11 +48,11 @@ O ambiente foi construído para máxima eficiência em:
 
     Ativos: Uma coleção selecionada de +900 wallpapers de alta qualidade para manter o conforto visual.
 
-.
-├── hypr/          # Hyprland core & shell automation
-├── rofi/          # Launcher & local theme collection
-├── swaync/        # Notification styles
-├── system/        # System-wide configs (Dolphin/KDE)
-├── waybar/        # Status bar layout
-├── wallpapers/    # System resources & assets
-└── .zshrc         # Shell environment & custom aliases
+    .
+    ├── hypr/          # Hyprland core & shell automation
+    ├── rofi/          # Launcher & local theme collection
+    ├── swaync/        # Notification styles
+    ├── system/        # System-wide configs (Dolphin/KDE)
+    ├── waybar/        # Status bar layout
+    ├── wallpapers/    # System resources & assets
+    └── .zshrc         # Shell environment & custom aliases
