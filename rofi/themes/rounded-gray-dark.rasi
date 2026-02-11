@@ -1,0 +1,20 @@
+/* ROUNDED THEME FOR ROFI */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+* {
+    /* Mudei de F2 para 80 (aprox 50% de opacidade) */
+    bg0:    #21212180;
+    
+    /* Se quiser que a barra de entrada ou itens também tenham transparência,
+       adicione dois dígitos no final das outras cores também. 
+       Ex: bg1: #2A2A2A80; */
+    bg1:    #2A2A2A;
+    bg2:    #3D3D3D80;
+    bg3:    #616161F2;
+    fg0:    #E6E6E6;
+    fg1:    #FFFFFF;
+    fg2:    #969696;
+    fg3:    #3D3D3D;
+}
+
+@import "template/rounded-template.rasi"

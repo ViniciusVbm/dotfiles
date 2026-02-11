@@ -1,0 +1,124 @@
+/* ROFI THEME - MONOCHROME DELICATE */
+
+* {
+    /* "Light" deixa a fonte fina e delicada. 
+       Tente também "Inter Light" ou "Open Sans Light" se preferir. */
+    font: "Roboto Light 12";
+
+    /* PALETA MONOCROMÁTICA */
+    bg0:  #0a0a0a; /* Fundo quase preto */
+    bg1:  #141414; /* Fundo da barra de pesquisa */
+    
+    fg0:  #d9d9d9; /* Texto claro (não branco puro, para ser suave) */
+    fg1:  #555555; /* Texto secundário/placeholder (cinza médio) */
+
+    /* Accent agora é cinza */
+    accent-color: #333333; 
+    /* Urgent agora é um cinza ligeiramente mais claro para diferenciar apenas se necessário */
+    urgent-color: #444444;
+
+    background-color: transparent;
+    text-color:       @fg0;
+
+    margin:  0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    width:    480;
+    
+    /* Borda fina e escura para definição sutil */
+    border:        1px;
+    border-color:  #202020;
+    border-radius: 12px;
+    
+    background-color: @bg0;
+}
+
+inputbar {
+    spacing:  8px;
+    padding:  12px;
+    background-color: @bg1;
+    border-radius: 10px;
+    margin: 12px 12px 0 12px;
+    /* Removemos qualquer borda colorida aqui */
+    border: 0px; 
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+prompt {
+    /* Prompt (o ícone de lupa ou texto) em cinza claro */
+    text-color: #808080;
+    font: "Roboto Bold 12"; /* Um pouco mais grosso apenas no ícone/prompt */
+}
+
+entry {
+    placeholder: "Pesquisar...";
+    placeholder-color: @fg1;
+}
+
+textbox {
+    padding: 8px;
+    background-color: @bg1;
+}
+
+listview {
+    padding: 12px;
+    lines:   8;
+    columns: 1;
+    fixed-height: false;
+    border: 0px;
+}
+
+element {
+    padding: 10px;
+    spacing: 12px;
+    border-radius: 8px;
+}
+
+element normal normal {
+    text-color: @fg1; /* Itens não selecionados ficam bem discretos */
+}
+
+element normal urgent {
+    text-color: @fg0;
+}
+
+element normal active {
+    text-color: @fg0;
+}
+
+element selected {
+    /* Texto branco puro quando selecionado para leitura fácil */
+    text-color: #ffffff; 
+}
+
+element selected normal, element selected active {
+    /* O "highlight" é um cinza escuro, mantendo a sobriedade */
+    background-color: @accent-color;
+}
+
+element selected urgent {
+    background-color: @urgent-color;
+}
+
+element-icon {
+    size: 1.0em;
+    /* Tenta deixar ícones um pouco mais transparentes se não estiverem selecionados */
+    opacity: 0.7; 
+}
+
+element selected element-icon {
+    opacity: 1.0;
+}
+
+element-text {
+    text-color: inherit;
+    /* Remove negrito automático ao filtrar */
+    highlight: none; 
+}
