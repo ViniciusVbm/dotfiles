@@ -1,15 +1,1 @@
-/*
-!.gitignore
-!README.MD
-!nvim/
-!i3/
-!waybar/
-!ranger/
-!zshrc
-!bspwm/
-!alacritty/
-!sxhkd/
-nvim/bundle
-ranger/plugins
-**__pycache__**
-nvim/.netrwhist
+

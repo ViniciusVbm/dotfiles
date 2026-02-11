@@ -1,12 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 28,
+    "height": 36, // Reduzi levemente para ficar mais elegante
     "spacing": 4,
     "margin-top": 6,
     "margin-left": 10,
     "margin-right": 10,
 
+    // Adicionei "battery" na lista da direita
     "modules-left": ["group/launcher", "wlr/taskbar", "hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["group/hardware", "network", "pulseaudio", "battery"],
@@ -17,6 +18,7 @@
         "modules": ["custom/arch", "hyprland/workspaces"]
     },
 
+    // O grupo de hardware agora ficará unificado visualmente
     "group/hardware": {
         "orientation": "horizontal",
         "modules": ["custom/gpu", "cpu", "memory", "temperature"]
@@ -54,16 +56,13 @@
     },
 
     "hyprland/window": {
-        "format": "{title}",
+        "format": " {title} ",
         "max-length": 40,
-        "separate-outputs": true,
-        "rewrite": {
-            "(.*)": "$1"
-        }
+        "separate-outputs": true
     },
 
     "clock": {
-        "format": " {:%H:%M    %d/%m/%y}",
+        "format": " {:%H:%M   %d/%m}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode"          : "year",
@@ -87,32 +86,36 @@
                     }
     },
 
+    // --- HARDWARE (Com ícones para ficar mais unido) ---
     "custom/gpu": {
         "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-        "format": " {}%",
+        "format": " {}%", // Ícone de chip
         "interval": 5,
+        "tooltip": false,
         "on-click": "kitty btop"
     },
 
     "cpu": {
         "interval": 2,
-        "format": " {usage}%",
+        "format": " {usage}%", // Ícone de processador
+        "tooltip": false,
         "on-click": "kitty btop"
     },
 
     "memory": {
         "interval": 10,
-        "format": " {}%",
+        "format": " {}%", // Ícone de lista/ram
         "on-click": "kitty btop"
     },
 
      "temperature": {
         "critical-threshold": 80,
-        "format": " {temperatureC}°C",
+        "format": " {temperatureC}°C", // Ícone de termômetro
         "format-critical": "HOT {temperatureC}°C",
         "on-click": "kitty btop" 
     },
 
+    // --- NOVO: BATERIA ---
     "battery": {
         "states": {
             "good": 95,

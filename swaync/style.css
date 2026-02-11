@@ -1,0 +1,55 @@
+/* --- ESTILO ULTRA CLEAN E FINO --- */
+
+.notification-row {
+    outline: none;
+    background: transparent;
+    padding: 0;
+    margin: 4px 0; /* Espaço menor entre notificações */
+}
+
+.notification-row .notification-background {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* O "Card" da Notificação */
+.notification-row .notification-background .notification {
+    background: rgba(15, 15, 15, 0.85); /* Escuro e elegante */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borda quase invisível */
+    border-radius: 8px; /* Cantos menos exagerados */
+    padding: 8px 14px; /* Padding reduzido para ser "fino" */
+    margin: 0px 10px;
+    box-shadow: none;
+}
+
+/* Esconder Ícones para limpeza total */
+.notification-row .notification-background .notification image {
+    display: none;
+}
+
+/* Título (Summary) */
+.summary {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #89b4fa; /* Cor de destaque para o título */
+}
+
+/* Texto da mensagem (Body) */
+.body {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 400;
+    font-size: 0.80rem;
+    color: #ffffff;
+    margin-top: 2px;
+}
+
+/* Esconder botões que poluem o visual (Fechar e Setas) */
+.close-button, .notification-action {
+    display: none;
+}
+
+/* Remover o tempo para ficar mais limpo */
+.time {
+    display: none;
+}
